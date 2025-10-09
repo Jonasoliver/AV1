@@ -14,7 +14,19 @@ export class Peca {
     this.status = status;
   }
 
-  atualizarStatus(novoStatus: StatusPeca): void {}
-  salvar(): void {}
-  carregar(): void {}
+  atualizarStatus(novoStatus: StatusPeca): void {
+    this.status = novoStatus;
+  }
+
+  salvar(): void {
+    // A persistência ocorre via Aeronave que contém a peça.
+  }
+
+  carregar(): void {
+    // A carga ocorre via Aeronave que contém a peça.
+  }
+
+  static fromJSON(obj: any): Peca {
+    return new Peca(obj.nome, obj.tipo as TipoPeca, obj.fornecedor, obj.status as StatusPeca);
+  }
 }

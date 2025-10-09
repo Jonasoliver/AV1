@@ -24,7 +24,27 @@ export class Aeronave {
     this.testes = [];
   }
 
-  detalhes(): void {}
+  detalhes(): string {
+    const linhas: string[] = [];
+    linhas.push(`Código: ${this.codigo}`);
+    linhas.push(`Modelo: ${this.modelo}`);
+    linhas.push(`Tipo: ${this.tipo}`);
+    linhas.push(`Capacidade: ${this.capacidade}`);
+    linhas.push(`Alcance: ${this.alcance}`);
+    linhas.push(`Peças: ${this.pecas.length}`);
+    linhas.push(`Etapas: ${this.etapas.length}`);
+    linhas.push(`Testes: ${this.testes.length}`);
+    return linhas.join("\n");
+  }
+
   salvar(): void {}
   carregar(): void {}
+
+  static fromJSON(obj: any): Aeronave {
+    const a = new Aeronave(obj.codigo, obj.modelo, obj.tipo as TipoAeronave, obj.capacidade, obj.alcance);
+    a.pecas = Array.isArray(obj.pecas) ? obj.pecas.map(Peca.fromJSON) : [];
+    a.etapas = Array.isArray(obj.etapas) ? obj.etapas.map(Etapa.fromJSON) : [];
+    a.testes = Array.isArray(obj.testes) ? obj.testes.map(Teste.fromJSON) : [];
+    return a;
+  }
 }

@@ -28,9 +28,21 @@ export class Funcionario {
   }
 
   autenticar(usuario: string, senha: string): boolean {
-    return false;
+    return this.usuario === usuario && this.senha === senha;
   }
 
   salvar(): void {}
   carregar(): void {}
+
+  static fromJSON(obj: any): Funcionario {
+    return new Funcionario(
+      obj.id,
+      obj.nome,
+      obj.telefone ?? "",
+      obj.endereco ?? "",
+      obj.usuario,
+      obj.senha,
+      obj.nivelPermissao as NivelPermissao
+    );
+  }
 }

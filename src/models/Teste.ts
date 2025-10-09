@@ -12,4 +12,8 @@ export class Teste {
 
   salvar(): void {}
   carregar(): void {}
+
+  static fromJSON(obj: any): Teste {
+    return new Teste(obj.tipo as TipoTeste, obj.resultado as ResultadoTeste);
+  }
 }
