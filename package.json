@@ -2,8 +2,12 @@
   "name": "av1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "main": "dist/main.js",
   "scripts": {
+    "build": "tsc -p .",
+    "start": "node dist/main.js",
+    "dev": "tsc -w -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
