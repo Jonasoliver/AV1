@@ -94,6 +94,3 @@ Observação: ambos os diretórios são gerados em tempo de execução e estão 
 - `npm run dev` — compila em watch
 - `npm start` — executa `dist/main.js` (que inicia o CLI)
 
-## Licença
-
-ISC — ver `package.json`.
