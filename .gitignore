@@ -6,6 +6,10 @@ dist/
 build/
 out/
 
+# Dados e relatórios gerados em runtime
+data/
+reports/
+
 # Ignorar arquivos de configuração temporários
 .env
 *.log
