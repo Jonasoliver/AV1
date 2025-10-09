@@ -16,9 +16,7 @@ O sistema permite:
 
 Diretórios gerados em runtime:
 - `data/` — banco de dados simples em `aerocode.json`
-- `reports/` — relatórios gerados: `relatorio_<CODIGO>.txt`
-
-Estes diretórios estão listados no `.gitignore` e não devem ser versionados.
+- `reports/` — relatórios gerados: `relatorio.txt`
 
 ## Arquitetura
 
