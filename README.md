@@ -38,7 +38,7 @@ Tecnologias e configurações:
 
 ## Pré-requisitos
 
-- Node.js LTS (18+ recomendado)
+- Node.js LTS (versão 18 pra cima)
 
 ## Instalação
 
